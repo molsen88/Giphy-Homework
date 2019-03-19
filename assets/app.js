@@ -15,18 +15,36 @@ function showInfo() {
         url: queryURL,
         method: "GET"
     } ).then( function ( response ) {
+        var results = response.data;
         console.log( response );
         for ( var j = 0; j < response.data.length; j++ ) {
 
             var image = $( "<img src=" + response.data[j].images.fixed_width.url + ">" );
             $( "#display" ).append( image );
 
+
+            // var picDiv = $( "<div class= 'picture'>" );
+            // var rating = results[j].rating;
+            // var staticSrc = results[j].images.fixed_height_still.url;
+            // var image = $( "<img>" );
+            // var p = $( "<p>" ).text( "Rating: " + rating );
+            // image.attr( "src", staticSrc );
+            // image.addClass( "gifGiphy" );
+            // image.attr( "data-state", "still" );
+            // image.attr( "data-still", staticSrc );
+            // image.attr( "data-animate", defaultAnimatedSrc );
+            // picDiv.append( p );
+            // picDiv.append( image );
+            // $( "#display" ).prepend( picDiv );
+
         }
 
     } )
 };
+
 function choiceButtons() {
     $( "#buttons" ).empty();
+
     for ( var i = 0; i < topics.length; i++ ) {
 
         var myButton = $( "<button>" );
@@ -34,6 +52,10 @@ function choiceButtons() {
         myButton.attr( "data-name", topics[i] );
         myButton.text( topics[i] );
         $( "#buttons" ).append( myButton );
+
+
+
+
 
 
     }
@@ -56,6 +78,17 @@ $( "#new-sport" ).on( "click", function ( event ) {
 
 $( document ).on( "click", ".sport-buttons", showInfo );
 choiceButtons();
+
+function pausePlayGifs() {
+    var state = $( this ).attr( "data-state" );
+    if ( state === "still" ) {
+        $( this ).attr( "src", $( this ).attr( "data-animate" ) );
+        $( this ).attr( "data-state", "animate" );
+    } else {
+        $( this ).attr( "src", $( this ).attr( "data-still" ) );
+        $( this ).attr( "data-state", "still" );
+    }
+}
 
 
 
