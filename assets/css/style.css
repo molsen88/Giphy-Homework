@@ -1,0 +1,51 @@
+body{
+    background-color: rgb(230, 219, 219);
+}
+.jumbotron{
+    background-image: url("../images/Mo\ and\ Bobby.jpeg");
+    background-size: cover;
+    border-bottom: rgb(36, 34, 34) 10px solid;
+    margin-bottom: auto;
+    height: 337px;
+    background-position: 0% 25%;
+    
+    
+}
+.jumbotron-fluid {
+    padding-right: 750px;
+}
+.display-4{
+    color: white;
+}
+h4{
+    color: white;
+}
+
+.sport-buttons{
+    color:  #0C2340;
+    background-color: #BD3039;
+    font-size: 22px;
+     border-radius: 35px;
+    border: 2px solid #0C2340;
+    box-shadow: 5px 2px 2px grey;
+    font-family: 'Oxygen', sans-serif;
+    
+
+}
+
+
+#sport-topic{
+    font-family: 'Oxygen', sans-serif;
+    font-size: 22px;
+
+}
+
+#new-sport{
+    color:  #0C2340;
+    background-color: #BD3039;
+    font-size: 22px;
+     border-radius: 35px;
+    border: 2px solid #0C2340;
+    box-shadow: 5px 2px 2px grey;
+    font-family: 'Oxygen', sans-serif;
+}
