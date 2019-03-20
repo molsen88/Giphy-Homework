@@ -30,8 +30,12 @@ h4{
     box-shadow: 5px 2px 2px grey;
     font-family: 'Oxygen', sans-serif;
     
-
 }
+.sport-button:hover{
+    background-color: white;
+}
+
+
 
 
 #sport-topic{
